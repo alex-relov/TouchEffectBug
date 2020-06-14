@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
+             mc:Ignorable="d"
+             x:Class="TouchEffectBug.MainPage">
+
+    <StackLayout>
+        <Grid
+            VerticalOptions="CenterAndExpand"
+            touch:TouchEff.NativeAnimation="True"
+            touch:TouchEff.CommandParameter="{Binding}">
+
+            <Label Margin="10" Text="Next Page" />
+            
+            <Grid.Effects>
+                <touch:TouchEff Completed="NextPage" />
+            </Grid.Effects>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
